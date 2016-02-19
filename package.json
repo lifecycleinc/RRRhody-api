@@ -1,0 +1,23 @@
+{
+  "name": "rrrhody-api",
+  "version": "0.0.1",
+  "description": "API server for RRRhody.",
+  "main": "server.js",
+  "scripts": {
+    "compile": "babel src -d dist --presets es2015",
+    "prestart": "npm run compile",
+    "start": "node dist/server.js",
+    "watch": "nodemon src/server --exec babel-node --presets es2015"
+  },
+  "dependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-register": "^6.5.2",
+    "debug": "^2.2.0",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0"
+  },
+  "engines": {
+    "node": "0.12.7"
+  }
+}
