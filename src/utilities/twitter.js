@@ -9,12 +9,12 @@ const {
   CONSUMER_SECRET
 } = process.env;
 
-if (!_.some([
+if (_.some([
   ACCESS_TOKEN_KEY,
   ACCESS_TOKEN_SECRET,
   CONSUMER_KEY,
   CONSUMER_SECRET
-], undefined)) {
+], (e) => { return e === undefined; })) {
   throw new Error('Twitter consumer and access token variables are required');
 }
 
